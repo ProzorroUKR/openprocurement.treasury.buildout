@@ -32,14 +32,6 @@ test_requires = requires + [
     'bottle'
 ]
 
-databridge_test_requires = requires + [
-    'webtest',
-    'python-coveralls',
-    'mock==1.0.1',
-    'requests_mock==1.3.0',
-    'bottle'
-]
-
 databridge_requires = requires + [
     'PyYAML',
     'gevent',
@@ -69,7 +61,7 @@ entry_points = {
         'main = openprocurement.integrations.treasury:main'
     ],
     'console_scripts': [
-        'treasury_bridge = openprocurement.integrations.treasury.databridge:main'
+        'treasury_bridge = openprocurement.integrations.treasury:main'
     ]
 }
 
@@ -96,10 +88,10 @@ setup(
     install_requires=requires,
     extras_require={
         'databridge': databridge_requires,
-        'databridge_test': databridge_test_requires,
         'test': test_requires,
         'api': api_requires,
         'api_test': api_test_requires
     },
+    test_suite="openprocurement.integrations.treasury.tests.main.suite",
     entry_points=entry_points
 )
