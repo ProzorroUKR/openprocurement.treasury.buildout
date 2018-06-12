@@ -5,3 +5,10 @@ develop-eggs/
 eggs/
 src/
 var/
+etc/
+parts/
+.vscode/
+openprocurement.integrations.treasury.egg-info/
+*.pyc
+cover/
+.coverage
