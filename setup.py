@@ -21,6 +21,8 @@ requires = [
     'simplejson',
     'request_id_middleware',
     'server_cookie_middleware',
+    'xmlschema',
+    'zeep'
     'hypothesis'
 ]
 

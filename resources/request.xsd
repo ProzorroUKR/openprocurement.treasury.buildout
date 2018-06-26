@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:complexType name="root">
+        <xs:sequence>
+            <xs:element name="ContractId" type="xs:string"/>
+            <xs:element name="TenderId" type="xs:string"/>
+            <xs:element name="IdentifierId" type="xs:string"/>
+            <xs:element name="ContractNumber" type="xs:string"/>
+            <xs:element name="DateSigned" type="xs:dateTime"/>
+            <xs:element name="ContractsAmount" type="xs:string"/>
+            <xs:element name="Currency" type="xs:string"/>
+            <xs:element name="ValueAddedTaxIncluded" type="xs:string"/>
+            <xs:element name="Documents">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name='File' maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="Bids">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name='Bid' maxOccurs="unbounded" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
