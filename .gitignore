@@ -12,3 +12,5 @@ openprocurement.integrations.treasury.egg-info/
 *.pyc
 cover/
 .coverage
+packets/*.xml
+archive/
